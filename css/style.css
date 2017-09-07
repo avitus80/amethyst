@@ -43,7 +43,6 @@ input[id^="tab"] {
 
 .sub-content {
   padding-top: 3em;
-  padding-bottom: 3em;
 }
 
 .sub-heading {
@@ -52,6 +51,7 @@ input[id^="tab"] {
 
 .sub-heading h2 {
   margin-bottom: .5em;
+  color: #000;
 }
 
 .sub-heading p {
@@ -328,6 +328,10 @@ input[id^="tab-outline"]:checked ~ .outline-details {
   background-blend-mode: darken;
 }
 
+.team-heading h2 {
+  color: inherit;
+}
+
 .all-team-members {
   display: flex;
   justify-content: space-around;
@@ -459,10 +463,6 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 }
 
 /* project section */
-.projects-heading {
-  color: #000;
-}
-
 .all-projects {
   display: flex;
   flex-wrap: wrap;
@@ -470,12 +470,13 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 
 .project {
   display: flex;
+  align-items: flex-start;
   width: 50%;
 }
 
 .project-picture {
-  width: 50%;
-  height: 240px;
+  max-width: 50%;
+  height: auto;
 }
 
 .project-info {
@@ -495,4 +496,69 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 
 .project-description {
   margin-bottom: 2em;
+}
+
+/* latest news section */
+.all-news {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1.5em;
+  padding-bottom: 3.5em;
+}
+
+.news {
+  position: relative;
+  width: 100%;
+}
+
+.news-background-image {
+  height: 240px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  border: 1px solid #fff;
+}
+
+.news-background-image-1 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://unsplash.it/480/240?image=369");
+}
+
+.news-background-image-2 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://unsplash.it/480/240?image=899");
+}
+
+.news-background-image-3 {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("https://unsplash.it/480/240?image=533");
+}
+
+.news-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+
+.news-date {
+  float: left;
+  width: 15%;
+  margin-left: 1.5em;
+  padding-right: 2em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.news-date-day {
+  border-bottom: 2px solid #fff;
+}
+
+.news-title {
+  display: inline-block;
+  margin-bottom: .5em;
+  color: #fff;
+}
+
+.news-details {
+  margin-bottom: 1em;
+  margin-right: 1.5em;
+  overflow: scroll;
 }
