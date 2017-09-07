@@ -59,6 +59,10 @@ input[id^="tab"] {
   margin-bottom: 2em;
 }
 
+.img-wrapper img {
+  display: block;
+}
+
 /* link color */
 .service-title a:link,
 .service-details a:visited,
@@ -561,4 +565,43 @@ input[id^="tab-stats"]:checked ~ .stats-details {
   margin-bottom: 1em;
   margin-right: 1.5em;
   overflow: scroll;
+}
+
+/* more info section */
+.more-info {
+  background: #9932cc;
+  color: #fff;
+}
+
+.info-heading {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+  overflow: hidden;
+}
+
+.info-heading p {
+  float: left;
+  padding-top: .4em;
+  font-size: 1.2em;
+}
+
+.info-button {
+  float: right;
+  padding: .5em 1.5em;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-picture {
+  max-width: 100%;
+  height: auto;
 }
