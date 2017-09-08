@@ -64,6 +64,11 @@ input[id^="tab"] {
 }
 
 /* link color */
+nav a:link,
+nav a:visited {
+  color: #fff;
+}
+
 .service-title a:link,
 .service-details a:visited,
 .project-info a:link {
@@ -76,6 +81,12 @@ input[id^="tab"] {
   color: #9932cc; /* dark orchid */
 }
 
+.social-contact a:link,
+.social-contact a:visited {
+  margin-right: .3em;
+  color: #fff;
+}
+
 /* heading section */
 .heading {
   position: relative;
@@ -86,7 +97,7 @@ input[id^="tab"] {
 
 .heading a:link,
 .heading a:visited {
-  color: #fff;
+  color: inherit;
 }
 
 .heading-background-image {
@@ -128,10 +139,10 @@ input[id^="tab"] {
 .main-menu ul {
   display: flex;
   justify-content: flex-end;
+  list-style-type: none;
 }
 
 .main-menu li {
-  display: inline;
   padding-right: 3em;
 }
 
@@ -144,10 +155,10 @@ input[id^="tab"] {
 .side-menu ul {
   display: flex;
   justify-content: flex-start;
+  list-style-type: none;
 }
 
 .side-menu li {
-  display: inline;
   padding-right: 2em;
 }
 
@@ -356,12 +367,6 @@ input[id^="tab-outline"]:checked ~ .outline-details {
   font-size: .9em;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-}
-
-.member-contact a:link,
-.member-contact a:visited {
-  margin-right: .3em;
-  color: #fff;
 }
 
 /* statistics section */
@@ -604,4 +609,71 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 .info-picture {
   max-width: 100%;
   height: auto;
+}
+
+/* footer section */
+footer {
+  font-family: "Lato", sans-serif;
+  font-size: .9em;
+  background-color: #222;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 3.5em;
+  padding-bottom: 2em;
+}
+
+.footer-container {
+  width: 25%;
+  padding-right: 2em;
+}
+
+.footer-heading {
+  text-transform: uppercase;
+  padding-bottom: 3em;
+  color: #fff;
+}
+
+.footer-content {
+  margin-bottom: 2em;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+}
+
+.footer-nav li {
+  margin-bottom: 1em;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#subscribe-email {
+  width: 100%;
+  padding: .5em;
+  margin-bottom: 2.5em;
+  border: 1px solid #808080;
+  border-radius: 5px;
+}
+
+.subscribe-button {
+  padding: .5em 1.5em;
+  background-color: inherit;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #9932cc;
+  border-radius: 15px;
+}
+
+.copyright {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  border-top: 1px solid #808080;
 }
