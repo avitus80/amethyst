@@ -29,6 +29,14 @@ a:link {
   font-weight: bold; /* 700 */
 }
 
+.menu {
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+}
+
 .tabs {
   display: flex;
   justify-content: flex-start;
@@ -59,13 +67,14 @@ input[id^="tab"] {
   margin-bottom: 2em;
 }
 
-.img-wrapper img {
-  display: block;
+.social-contact a:link {
+  margin-right: .3em;
 }
 
 /* link color */
-nav a:link,
-nav a:visited {
+.menu a:link,
+.menu a:visited,
+.social-contact a:link {
   color: #fff;
 }
 
@@ -77,14 +86,9 @@ nav a:visited {
 
 .service-title a:visited,
 .service-details a:link,
-.project-info a:visited {
-  color: #9932cc; /* dark orchid */
-}
-
-.social-contact a:link,
+.project-info a:visited,
 .social-contact a:visited {
-  margin-right: .3em;
-  color: #fff;
+  color: #9932cc; /* dark orchid */
 }
 
 /* heading section */
@@ -108,7 +112,7 @@ nav a:visited {
   background-size: cover;
 }
 
-/* site main navigation */
+/* main navigation */
 .top-nav {
   display: flex;
   justify-content: center;
@@ -122,12 +126,21 @@ nav a:visited {
 
 /* site logo */
 .logo {
+  padding-left: .5em;
   padding-right: .5em;
   font-size: 1.7em;
 }
 
+/* responsive menu */
+#r-menu,
+.responsive-menu {
+  display: none;
+}
+
 /* main menu */
 .main-menu {
+  display: flex;
+  justify-content: flex-end;
   padding-top: 2em;
   padding-bottom: 2em;
   width: 600px;
@@ -136,26 +149,16 @@ nav a:visited {
   border-right: 1px solid #d3d3d3;
 }
 
-.main-menu ul {
-  display: flex;
-  justify-content: flex-end;
-  list-style-type: none;
-}
-
 .main-menu li {
   padding-right: 3em;
 }
 
 /* side menu */
 .side-menu {
-  padding-left: 1em;
-  font-size: 1.5em;
-}
-
-.side-menu ul {
   display: flex;
   justify-content: flex-start;
-  list-style-type: none;
+  padding-left: 1em;
+  font-size: 1.5em;
 }
 
 .side-menu li {
@@ -188,7 +191,7 @@ nav a:visited {
 /* intro section */
 .intro {
   margin-top: 3em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 /* outline section */
@@ -202,13 +205,16 @@ nav a:visited {
   height: 275px;
 }
 
+.outline-tabs > li {
+  width: 10%;
+}
+
 .outline-title {
   display: inline-block;
-  width: 85px;
+  width: 90%;
   padding-top: .8em;
   padding-bottom: .8em;
   cursor: pointer;
-  white-space: nowrap;
   border-bottom: 1px solid #d3d3d3;
 }
 
@@ -254,12 +260,21 @@ input[id^="tab-outline"]:checked ~ .outline-details {
 /* services section */
 .services {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 25%;
 }
 
 .service-description {
   margin-top: 1.5em;
   margin-bottom: 1em;
   color: #d3d3d3;
+}
+
+.service-details {
+  margin-bottom: 1em;
 }
 
 /* why us section */
@@ -293,7 +308,7 @@ input[id^="tab-outline"]:checked ~ .outline-details {
 }
 
 .why-us-heading p {
-  margin-bottom: 3.5em;
+  margin-bottom: 10%;
   font-style: italic;
 }
 
@@ -315,7 +330,7 @@ input[id^="tab-outline"]:checked ~ .outline-details {
 
 .download-button {
   display: inline-block;
-  margin-top: 2em;
+  margin-top: 5%;
   padding-top: .5em;
   padding-bottom: .5em;
   padding-left: 1.5em;
@@ -334,13 +349,16 @@ input[id^="tab-outline"]:checked ~ .outline-details {
 }
 
 .team-background-image {
-  height: 500px;
   background-image: url("https://unsplash.it/1500/500?image=378;gravity=center;blur");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-color: #808080;
   background-blend-mode: darken;
+}
+
+.team-sub-content {
+  padding-bottom: 4.2em;
 }
 
 .team-heading h2 {
@@ -432,7 +450,7 @@ input[id^="tab-stats"]:checked + .stats-title > .link-text {
   top: 285px;
   left: 0;
   width: 100%;
-  height: 265px;
+  height: auto;
 }
 
 input[id^="tab-stats"]:checked ~ .stats-details {
@@ -441,6 +459,7 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 
 .stats-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
 }
@@ -479,6 +498,7 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 
 .project {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
   width: 50%;
 }
@@ -489,6 +509,7 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 }
 
 .project-info {
+  align-self: stretch;
   width: 50%;
   padding: 2em;
 }
@@ -549,7 +570,7 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 
 .news-date {
   float: left;
-  width: 15%;
+  width: 4.5em;
   margin-left: 1.5em;
   padding-right: 2em;
   text-align: center;
@@ -579,21 +600,20 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 }
 
 .info-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 60%;
   margin: 0 auto;
   padding-top: 3.5em;
   padding-bottom: 3.5em;
-  overflow: hidden;
 }
 
 .info-heading p {
-  float: left;
-  padding-top: .4em;
   font-size: 1.2em;
 }
 
 .info-button {
-  float: right;
   padding: .5em 1.5em;
   text-align: center;
   border-radius: 15px;
@@ -607,6 +627,7 @@ input[id^="tab-stats"]:checked ~ .stats-details {
 }
 
 .info-picture {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -640,11 +661,8 @@ footer {
   margin-bottom: 2em;
 }
 
-.footer-nav ul {
-  list-style-type: none;
-}
-
 .footer-nav li {
+  display: block;
   margin-bottom: 1em;
 }
 
@@ -676,4 +694,190 @@ footer {
   padding-bottom: 2em;
   text-align: center;
   border-top: 1px solid #808080;
+}
+
+/* tablet devices */
+@media only screen and (max-width: 800px) {
+  .default-center {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /* main navigation */
+  .top-nav {
+    display: block;
+  }
+
+  /* hide main menu and side menu */
+  .main-menu,
+  .side-menu {
+    display: none;
+  }
+
+  .logo {
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }
+
+  /* display the accordion style menu */
+  .responsive-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    padding: 1em;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  /* display the menu as drop down */
+  #r-menu:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 100px;
+    padding: .5em;
+    background: linear-gradient(to bottom right, rgba(153, 50, 204, .8), rgba(255, 165, 0, .8));
+  }
+
+  /* adjustment for the drop down menu */
+  .main-menu {
+    top: 4.2em;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+  }
+
+  .main-menu li {
+    padding: .8em 1em;
+  }
+
+  .side-menu {
+    top: 11.3em;
+    border-top: 1px solid #d3d3d3;
+  }
+
+  .side-menu li {
+    padding: .4em 1em;
+  }
+
+  /* why us section */
+  .why-us-text {
+    left: 10%;
+    width: 35%;
+  }
+
+  /* project section */
+  .all-projects {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .project:first-child,
+  .project:last-child {
+    flex-direction: row-reverse;
+  }
+
+  /* latest news section */
+  .all-news {
+    flex-direction: column;
+  }
+
+  /* more info section */
+  .info-heading {
+    width: 80%;
+  }
+}
+
+/* mobile devices */
+@media only screen and (max-width: 425px) {
+  .default-center {
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  .sub-content {
+    padding-top: 1em;
+  }
+
+  .service {
+    width: 50%;
+  }
+
+  .why-us-text {
+    top: 2em;
+    left: 1em;
+    width: 45%;
+  }
+
+  .team-sub-content {
+    padding-bottom: 0;
+  }
+
+  .team-member {
+    width: 50%;
+    padding-right: .5em;
+  }
+
+  .stats-tabs {
+    height: 800px;
+  }
+
+  input[id^="tab-stats"]:checked + .stats-title > .link-text {
+    height: 30px;
+    margin-bottom: 5em;
+  }
+
+  .project,
+  .project:last-child {
+    flex-direction: column;
+  }
+
+  .project:first-child,
+  .project:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  .project-info {
+    width: 100%;
+  }
+
+  .project-picture {
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .all-news {
+    padding-bottom: 1em;
+  }
+
+  .main-footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-container {
+    width: 50%;
+    padding-bottom: 1em;
+  }
+
+  .about-us {
+    order: 1;
+  }
+
+  .subscribe {
+    order: 2;
+  }
+
+  .footer-heading {
+    padding-bottom: 1em;
+  }
 }
