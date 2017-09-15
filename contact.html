@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,400i,700" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <section class="heading">
+      <section class="top-nav">
+        <header class="logo">
+          <h2><a href="index.html">AMETHYST</a></h2>
+        </header>
+
+        <!-- <input type="checkbox" id="r-menu">
+        <label class="responsive-menu uppercase-text" for="r-menu">Menu <i class="fa fa-bars"></i></label> -->
+
+        <ul class="menu main-menu uppercase-text">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <ul class="menu side-menu">
+          <li><a href="#"><i class="fa fa-facebook-square fa-lg"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a></li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="map">
+      <script>
+        function initMap() {
+          /* coordinate */
+          var eit = {
+            lat: -31.945622,
+            lng: 115.839964
+          };
+
+          /* the map */
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: eit,
+            /* styling */
+            styles: [
+              {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#d3d3d3"
+                  }
+                ]
+              },
+              {
+                "featureType": "landscape.natural",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#ffffff"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.attraction",
+                "elementType": "labels",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.business",
+                "elementType": "labels",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.government",
+                "elementType": "labels",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.medical",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#9932cc"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.school",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#9932cc"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi.sports_complex",
+                "elementType": "labels",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.arterial",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#ffff66"
+                  },
+                  {
+                    "lightness": 80
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#808080"
+                  },
+                  {
+                    "lightness": 20
+                  }
+                ]
+              },
+              {
+                "featureType": "road.local",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#ffff66"
+                  },
+                  {
+                    "lightness": 80
+                  }
+                ]
+              }
+            ]
+          });
+
+          /* set the marker */
+          var marker = new google.maps.Marker({
+            position: eit,
+            map: map,
+            // label: "A",
+            animation: google.maps.Animation.DROP
+          });
+
+          /* draw red square around the building */
+          var eitCoords = [
+            { lat: -31.945542, lng: 115.839931 },
+            { lat: -31.945580, lng: 115.840057 },
+            { lat: -31.945716, lng: 115.839999 },
+            { lat: -31.945679, lng: 115.839874 },
+            { lat: -31.945542, lng: 115.839931 }
+          ];
+          var eitLocation = new google.maps.Polygon({
+            paths: eitCoords,
+            strokeColor: '#9932CC',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#9932CC',
+            fillOpacity: 0.35
+          });
+          eitLocation.setMap(map);
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7a-erAnEfwkh_CeqH7928udY3N0f9Yn0&callback=initMap" type="text/javascript"></script>
+    </section>
+
+    <section class="contact-us sub-content">
+      <header class="sub-heading default-center">
+        <h2>Contact Us</h2>
+        <p>Vestibulum commodo ante odio, a condimentum sem tempor sed.</p>
+      </header>
+      
+      <section class="contact-info default-center">
+        <ul class="tabs contact-info-tabs">
+          <li>
+            <input type="radio" id="tab-contact-info-1" name="tab-h" checked>
+            <label class="contact-info-title" for="tab-contact-info-1">Lorem ipsum</label>
+            <div class="contact-info-details">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a nulla ipsum. Nullam feugiat vulputate metus vitae consequat. Curabitur risus turpis, tincidunt in nisl quis, consectetur sollicitudin neque. Proin nec mollis leo. Suspendisse nibh leo, elementum vulputate enim vel, pretium facilisis nibh. Sed molestie lectus magna, eget fermentum ex rhoncus aliquam. Proin sit amet libero eu urna mattis pulvinar et ac velit. Nullam fermentum eros sit amet tortor posuere, condimentum bibendum lectus iaculis. Maecenas quis libero ultricies, ultricies eros nec, molestie nisl. Duis luctus id dolor nec eleifend. Nunc sed dictum eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="tab-contact-info-2" name="tab-h">
+            <label class="contact-info-title" for="tab-contact-info-2">Lorem ipsum</label>
+            <div class="contact-info-details">
+              <p>Aenean sit amet nibh turpis. Ut a mauris eu neque consequat facilisis. Pellentesque sed vestibulum enim. Praesent mattis, arcu ut commodo ultrices, tellus sapien sollicitudin quam, sed fermentum purus dolor a mauris. Aenean eu iaculis velit, facilisis sollicitudin diam. Vestibulum posuere ullamcorper nunc. Ut sodales dictum quam, at eleifend risus. Sed elementum vel nulla non tempor. Vestibulum sed tortor nunc. Nullam vitae leo vel dolor gravida porta. Mauris euismod feugiat tristique.</p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="tab-contact-info-3" name="tab-h">
+            <label class="contact-info-title" for="tab-contact-info-3">Lorem ipsum</label>
+            <div class="contact-info-details">
+              <p>Morbi lorem ex, ullamcorper id blandit ut, pulvinar nec lacus. Nunc id tincidunt est. Quisque eget metus at ligula volutpat blandit nec sed felis. Sed eget vehicula mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque maximus rhoncus libero, non iaculis lorem.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="our-location sub-content">
+      <header class="sub-heading default-center">
+        <h2>Our Location</h2>
+        <p>Vestibulum commodo ante odio, a condimentum sem tempor sed.</p>
+      </header>
+
+      <section class="location-info default-center">
+        <section class="location-details">
+          <header>
+            <span class="location-background"><i class="fa fa-map-marker fa-lg"></i></span>
+          </header>
+          <p>1031 Wellington Street</p>
+        </section>
+        <section class="location-details">
+          <header>
+            <span class="location-background"><i class="fa fa-mobile-phone fa-lg"></i></span>
+          </header>
+          <p>444-555-1111</p>
+        </section>
+        <section class="location-details">
+          <header>
+            <span class="location-background"><i class="fa fa-envelope-o fa-lg"></i></span>
+          </header>
+          <p>office@email.com</p>
+        </section>
+      </section>
+    </section>
+
+    <div class="column-2 default-center">
+      <section class="why-us-1 sub-content">
+        <header class="sub-heading why-us-1-heading">
+          <h2>Why Us?</h2>
+          <p>Vestibulum commodo ante odio, a condimentum sem tempor sed.</p>
+        </header>
+
+        <section class="why-us-1-content">
+          <ul class="accordion">
+            <li>
+              <input type="radio" id="acc-1" name="why-1" checked>
+              <label class="acc-title" for="acc-1">
+                <span class="acc-title-icon"><i class="fa fa-briefcase"></i></span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </label>
+              <p class="acc-content">Praesent mattis nulla a diam commodo convallis. Curabitur placerat mattis odio eget lobortis. Morbi non libero imperdiet, pellentesque odio at, maximus augue. Aliquam quis posuere dui, sed vestibulum nisi. Mauris commodo enim sit amet turpis viverra faucibus. Cras imperdiet ante eu est aliquet consectetur non non neque. Curabitur euismod, quam et consectetur imperdiet, dui turpis rutrum leo, id condimentum sapien ipsum ac nulla.</p>
+            </li>
+            <li>
+              <input type="radio" id="acc-2" name="why-1">
+              <label class="acc-title" for="acc-2">
+                <span class="acc-title-icon"><i class="fa fa-camera"></i></span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </label>
+              <p class="acc-content">Praesent mattis nulla a diam commodo convallis. Curabitur placerat mattis odio eget lobortis. Morbi non libero imperdiet, pellentesque odio at, maximus augue. Aliquam quis posuere dui, sed vestibulum nisi. Mauris commodo enim sit amet turpis viverra faucibus. Cras imperdiet ante eu est aliquet consectetur non non neque. Curabitur euismod, quam et consectetur imperdiet, dui turpis rutrum leo, id condimentum sapien ipsum ac nulla.</p>
+            </li>
+            <li>
+              <input type="radio" id="acc-3" name="why-1">
+              <label class="acc-title" for="acc-3">
+                <span class="acc-title-icon"><i class="fa fa-android"></i></span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </label>
+              <p class="acc-content">Praesent mattis nulla a diam commodo convallis. Curabitur placerat mattis odio eget lobortis. Morbi non libero imperdiet, pellentesque odio at, maximus augue. Aliquam quis posuere dui, sed vestibulum nisi. Mauris commodo enim sit amet turpis viverra faucibus. Cras imperdiet ante eu est aliquet consectetur non non neque. Curabitur euismod, quam et consectetur imperdiet, dui turpis rutrum leo, id condimentum sapien ipsum ac nulla.</p>
+            </li>
+            <li>
+              <input type="radio" id="acc-4" name="why-1">
+              <label class="acc-title" for="acc-4">
+                <span class="acc-title-icon"><i class="fa fa-cloud-download"></i></span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </label>
+              <p class="acc-content">Praesent mattis nulla a diam commodo convallis. Curabitur placerat mattis odio eget lobortis. Morbi non libero imperdiet, pellentesque odio at, maximus augue. Aliquam quis posuere dui, sed vestibulum nisi. Mauris commodo enim sit amet turpis viverra faucibus. Cras imperdiet ante eu est aliquet consectetur non non neque. Curabitur euismod, quam et consectetur imperdiet, dui turpis rutrum leo, id condimentum sapien ipsum ac nulla.</p>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="send-message sub-content">
+        <header class="sub-heading send-message-heading">
+          <h2>Send us a message</h2>
+          <p>Vestibulum commodo ante odio, a condimentum sem tempor sed.</p>
+        </header>
+
+        <section class="send-message-content">
+          <form action="" method="post" class="send-message-form">
+            <div class="form-row">
+              <input type="text" id="first-name" name="first-name" placeholder="First Name">
+              <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+            </div>
+            <div class="form-row">
+              <input type="text" id="address" name="address" placeholder="Address">
+            </div>
+            <fieldset class="form-row-frame">
+              <legend>Age</legend>
+              <div class="selection">
+                <div class="item">
+                  <input type="radio" id="under-18" name="age" value="under-18">
+                  <label for="under-18">Under 18</label>
+                </div>
+                <div class="item">
+                  <input type="radio" id="18-30" name="age" value="18-30">
+                  <label for="18-30">18 - 30</label>
+                </div>
+                <div class="item">
+                  <input type="radio" id="over-30" name="age" value="over-30">
+                  <label for="over-30">Over 30</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-row">
+              <input type="email" id="email" name="email" placeholder="E-mail">
+            </div>
+            <div class="form-row">
+              <input type="text" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="form-row">
+              <textarea id="message" name="message" placeholder="Message"></textarea>
+            </div>
+            <fieldset class="form-row-frame">
+              <div class="item">
+                <input type="checkbox" id="agree" name="agree" value="agree">
+                <label for="agree">Mauris feugiat velit in lacus convallis tristique.</label>
+              </div>
+            </fieldset>
+              <button class="send-button uppercase-text">Send</button>
+          </form>
+        </section>
+      </section>
+    </div>
+
+    <section class="more-info sub-content">
+      <header class="sub-heading default-center more-info-heading">
+        <h2>Follow Us</h2>
+        <p>Vestibulum commodo ante odio, a condimentum sem tempor sed.</p>
+      </header>
+
+      <section class="social-icons">
+        <div class="social-contact">
+          <a href="#">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle-thin fa-stack-2x"></i>
+              <i class="fa fa-facebook-square fa-stack-1x"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle-thin fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle-thin fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+          </a>
+          <a href="#">
+            <span class="fa-stack fa-2x">
+              <i class="fa fa-circle-thin fa-stack-2x"></i>
+              <i class="fa fa-google-plus fa-stack-1x"></i>
+            </span>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <section class="main-footer default-center">
+        <section class="footer-container about-us">
+          <header class="footer-heading">
+            <h3>About us</h3>
+          </header>
+          <p class="footer-content">Suspendisse accumsan convallis dolor et sollicitudin. Maecenas risus arcu, feugiat non laoreet sit amet, efficitur ut dolor. Morbi feugiat tellus et tellus vulputate hendrerit. Aliquam mattis lectus quam, non viverra lectus dapibus in. Mauris sagittis, ipsum et fringilla vestibulum.</p>
+          <p class="social-contact">
+            <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
+            <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+            <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+          </p>
+        </section>
+        <section class="footer-container navigation">
+          <header class="footer-heading">
+            <h3>Navigation</h3>
+          </header>
+          <ul class="menu footer-nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </section>
+        <section class="footer-container latest-posts">
+          <header class="footer-heading">
+            <h3>Latest posts</h3>
+          </header>
+          <ul class="menu footer-nav">
+            <li><a href="#">Vivamus accumsan</a></li>
+            <li><a href="#">Etiam cursus</a></li>
+            <li><a href="#">Suspendisse</a></li>
+            <li><a href="#">Sed vitae</a></li>
+            <li><a href="#">Sed consequat</a></li>
+          </ul>
+        </section>
+        <section class="footer-container subscribe">
+          <header class="footer-heading">
+            <h3>Subscribe</h3>
+          </header>
+          <p class="footer-content">Integer a urna leo. Sed ut vulputate ipsum. Nulla arcu ex, posuere ut justo.</p>
+          <form class="subscribe-form" action="" method="post">
+            <input id="subscribe-email" name="subscribe-email" type="email" placeholder="E-mail" required>
+            <button class="subscribe-button uppercase-text">Subscribe</button>
+          </form>
+        </section>
+      </section>
+      <div class="copyright">
+        <p>&copy; Copyright Amethyst</p>
+      </div>
+    </footer>
+  </body>
+</html>
