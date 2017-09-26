@@ -1,0 +1,34 @@
+/* link color */
+.main-menu a:link,
+.main-menu a:visited,
+.side-menu a:link,
+.side-menu a:visited {
+  color: #808080;
+}
+
+/* main navigation */
+.top-nav {
+  position: initial;
+}
+
+.logo {
+  color: #000;
+}
+
+.side-menu {
+  font-size: 1em;
+}
+
+.side-menu li {
+  padding-right: 1em;
+}
+
+/* construction section */
+.construction {
+  height: 400px;
+  padding-top: 150px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #9932cc;
+}
