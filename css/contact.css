@@ -23,9 +23,11 @@
 }
 
 .acc-content {
-  display: none;
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
   padding-top: 1em;
-  padding-bottom: .5em;
+  transition: max-height .3s ease-out;
 }
 
 input[id^="acc"] {
@@ -33,7 +35,8 @@ input[id^="acc"] {
 }
 
 input[id^="acc"]:checked ~ .acc-content {
-  display: block;
+  max-height: 200px;
+  transition: max-height 1s ease-in-out;
 }
 
 .form-row {
