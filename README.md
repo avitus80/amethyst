@@ -1,3 +1,5 @@
-Amethyst Website
+# Amethyst Website
 
-My first front end web development project.
+A mockup of a simple website done as my first front end web development project.
+
+
